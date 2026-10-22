@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { background-color: #f8fafc; }
+  html { font-size: 15px; }
+  body { font-family: 'Inter', sans-serif; letter-spacing: -0.01em; }
+
+  /* Nexora DaisyUI theme (applied globally so no data-theme tree-shaking issues) */
+  :root {
+    --p: 15 23 42;          /* #0f172a  primary */
+    --pc: 255 255 255;      /* primary-content */
+    --s: 51 65 85;          /* #334155  secondary */
+    --sc: 255 255 255;
+    --a: 37 99 235;         /* #2563eb  accent */
+    --ac: 255 255 255;
+    --n: 30 41 59;          /* #1e293b  neutral */
+    --nc: 255 255 255;
+    --b1: 255 255 255;      /* base-100 */
+    --b2: 248 250 252;      /* base-200 #f8fafc */
+    --b3: 241 245 249;      /* base-300 #f1f5f9 */
+    --bc: 15 23 42;         /* base-content */
+    --in: 58 191 248;
+    --inc: 0 46 92;
+    --su: 54 211 153;
+    --suc: 4 76 53;
+    --wa: 251 191 36;
+    --wac: 66 32 6;
+    --er: 248 113 113;
+    --erc: 99 38 38;
+    --rounded-box: 1rem;
+    --rounded-btn: 0.5rem;
+    --rounded-badge: 1.9rem;
+    --animation-btn: 0.25s;
+    --animation-input: 0.2s;
+    --btn-focus-scale: 0.95;
+    --border-btn: 1px;
+    --tab-border: 1px;
+    --tab-radius: 0.5rem;
+  }
+}
+
+.glass-sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+}
+
+.menu li > a.active {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+    border-right: 3px solid #0f172a;
+    border-radius: 0;
+    font-weight: 600;
+}
+
+.menu li > a:hover {
+    background: #f8fafc;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    border-radius: 0.75rem;
+}
+

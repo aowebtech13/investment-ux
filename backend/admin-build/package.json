@@ -1,0 +1,15 @@
+{
+  "name": "nexora-admin-build",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Tailwind + DaisyUI build for the Nexora Laravel admin panel",
+  "scripts": {
+    "build": "tailwindcss -c ./tailwind.config.js -i ./admin-input.css -o ../public/admin/admin.css --minify",
+    "watch": "tailwindcss -c ./tailwind.config.js -i ./admin-input.css -o ../public/admin/admin.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "daisyui": "^4.7.2"
+  }
+}
+

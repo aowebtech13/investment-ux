@@ -1,0 +1,38 @@
+name: Deploy Laravel to AWS EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: ${{ secrets.EC2_PORT }}
+          script: |
+            git config --global --add safe.directory /var/www/backend/backend
+            cd /var/www/backend/backend
+            
+            # Pull latest changes
+            git pull origin main
+            
+            # Run composer using EC2's native PHP 8.5 environment
+            composer install --no-dev --optimize-autoloader --no-interaction
+            
+            # Run migrations and update caches
+            php artisan migrate --force
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+            
+            # Reload web services
+            sudo systemctl reload php8.5-fpm
+            sudo systemctl reload nginx
