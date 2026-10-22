@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+
+<head>
+    <!-- Required meta tags  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Investment AdminUIUX - Bootstrap HTML Admin template - adminuiux.com</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="../../css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --adminuiux-content-font: "Open Sans", sans-serif;
+            --adminuiux-content-font-weight: 400;
+            --adminuiux-title-font: "Lexend", sans-serif;
+            --adminuiux-title-font-weight: 600;
+        }
+    </style>
+
+<script defer="" src="assets/js/app.js?1096aad991449c8654b2"></script><link href="assets/css/app.css?1096aad991449c8654b2" rel="stylesheet"></head>
+
+<body class="main-bg main-bg-opac main-bg-blur adminuiux-sidebar-fill-white adminuiux-sidebar-boxed  theme-blue roundedui" data-theme="theme-blue" data-sidebarfill="adminuiux-sidebar-fill-white" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
+    <!-- Pageloader -->
+<div class="pageloader">
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-center text-center h-100">
+            <div class="col-12 mb-auto pt-4"></div>
+            <div class="col-auto">
+                <img src="assets/img/logo.svg" alt="" class="height-60 mb-3">
+                <p class="h6 mb-0">AdminUIUX</p>
+                <p class="h3 mb-4">Investment</p>
+                <div class="loader10 mb-2 mx-auto"></div>
+            </div>
+            <div class="col-12 mt-auto pb-4">
+                <p class="text-secondary">Please wait we are preparing awesome things to preview...</p>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- standard header -->
+<header class="adminuiux-header">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- logo -->
+            <a class="navbar-brand" href="investment-dashboard.html">
+                <img data-bs-img="light" src="assets/img/logo-light.svg" alt="">
+                <img data-bs-img="dark" src="assets/img/logo.svg" alt="">
+                <div class="">
+                    <span class="h4">Investment<b>UX</b></span>
+                    <p class="company-tagline">AdminUIUX HTML template</p>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-center" id="header-navbar">
+                <ul class="navbar-nav mx-lg-3 mb-2 mb-md-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="investment-dashboard.html">InvestmentUX</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="components.html" aria-current="page">Components</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="documentation.html">Documentation</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class=" ms-auto "></div>
+            <!-- right icons button -->
+            <div class="ms-auto">
+                <!-- dark mode -->
+                <button class="btn btn-link btn-square btnsunmoon btn-link-header" id="btn-layout-modes-dark-page">
+                    <i class="sun mx-auto" data-feather="sun"></i>
+                    <i class="moon mx-auto" data-feather="moon"></i>
+                </button>
+                <!-- Buy now -->
+                <button class="btn btn-theme btn-link-header">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+            <div class="adminuiux-wrap">
+                <main class="adminuiux-content" onclick="contentClick()">
+
+                    <!-- breadcrumb -->
+                    <div class="container-fluid mt-3">
+                        <div class="bg-theme-1-subtle rounded px-3 py-3">
+                            <div class="row gx-3 align-items-center">
+                                <div class="col col-sm mb-2 mb-sm-0">
+                                    <p class="h5">Checkboxes</p>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item bi"><a href="investment-dashboard.html">App Demo</a></li>
+                                            <li class="breadcrumb-item bi"><a href="components.html">Components</a></li>
+                                            <li class="breadcrumb-item active bi" aria-current="page">Checkboxes</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div class="col-auto ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content  -->
+                    <div class="container mt-4">
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Standard Checkboxes</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Checked checkbox
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked="">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                        Indeterminate checkbox
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled="" checked="">
+                                    <label class="form-check-label" for="flexCheckIndeterminateDisabled">
+                                        Disabled indeterminate checkbox
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled="">
+                                    <label class="form-check-label" for="flexCheckDisabled">
+                                        Disabled checkbox
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked="" disabled="">
+                                    <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                        Disabled checked checkbox
+                                    </label>
+                                </div>
+                                <script>
+                                    var checkbox1 = document.getElementById("flexCheckIndeterminate");
+                                    checkbox1.indeterminate = true;
+                                    var checkbox2 = document.getElementById("flexCheckIndeterminateDisabled");
+                                    checkbox2.indeterminate = true;               
+                                </script>
+                            </div>
+                            <div class="collapse" id="collapse1">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;div class="form-check"&gt;
+                &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"&gt;
+                &lt;label class="form-check-label" for="flexCheckDefault"&gt;
+                    Default checkbox
+                &lt;/label&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-check"&gt;
+                &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked&gt;
+                &lt;label class="form-check-label" for="flexCheckChecked"&gt;
+                    Checked checkbox
+                &lt;/label&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-check"&gt;
+                &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked&gt;
+                &lt;label class="form-check-label" for="flexCheckIndeterminate"&gt;
+                    Indeterminate checkbox
+                &lt;/label&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-check"&gt;
+                &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled checked&gt;
+                &lt;label class="form-check-label" for="flexCheckIndeterminateDisabled"&gt;
+                    Disabled indeterminate checkbox
+                &lt;/label&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-check"&gt;
+                &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled&gt;
+                &lt;label class="form-check-label" for="flexCheckDisabled"&gt;
+                    Disabled checkbox
+                &lt;/label&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-check"&gt;
+                &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled&gt;
+                &lt;label class="form-check-label" for="flexCheckCheckedDisabled"&gt;
+                    Disabled checked checkbox
+                &lt;/label&gt;
+            &lt;/div&gt;
+            
+            &lt;script&gt;
+                var checkbox1 = document.getElementById("flexCheckIndeterminate");
+                checkbox1.indeterminate = true;
+                var checkbox2 = document.getElementById("flexCheckIndeterminateDisabled");
+                checkbox2.indeterminate = true;
+            &lt;/script&gt;
+            </code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Checkboxes Inline</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled="">
+                                    <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapse2">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;div class="form-check form-check-inline"&gt;
+                &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"&gt;
+                &lt;label class="form-check-label" for="inlineCheckbox1"&gt;1&lt;/label&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-check form-check-inline"&gt;
+                &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"&gt;
+                &lt;label class="form-check-label" for="inlineCheckbox2"&gt;2&lt;/label&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-check form-check-inline"&gt;
+                &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled&gt;
+                &lt;label class="form-check-label" for="inlineCheckbox3"&gt;3 (disabled)&lt;/label&gt;
+            &lt;/div&gt;
+            </code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Standard Checkbox Buttons</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <input type="checkbox" class="btn-check" id="btn-check">
+                                <label class="btn btn-theme" for="btn-check">Single toggle</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check-2" checked="">
+                                <label class="btn btn-theme" for="btn-check-2">Checked</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check-3" disabled="">
+                                <label class="btn btn-theme" for="btn-check-3">Disabled</label>
+                            </div>
+                            <div class="collapse" id="collapse3">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;input type="checkbox" class="btn-check" id="btn-check"&gt;
+            &lt;label class="btn btn-theme" for="btn-check"&gt;Single toggle&lt;/label&gt;
+            
+            &lt;input type="checkbox" class="btn-check" id="btn-check-2" checked&gt;
+            &lt;label class="btn btn-theme" for="btn-check-2"&gt;Checked&lt;/label&gt;
+            
+            &lt;input type="checkbox" class="btn-check" id="btn-check-3" disabled&gt;
+            &lt;label class="btn btn-theme" for="btn-check-3"&gt;Disabled&lt;/label&gt;
+            </code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Checkbox Colored</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC1" checked="">
+                                            <label class="form-check-label" for="checkC1">
+                                                Theme checkbox
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3" style="--adminuiux-theme-1:var(--adminuiux-theme-accent-1)">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC2" checked="">
+                                            <label class="form-check-label" for="checkC2">
+                                                Accent checkbox
+                                            </label>
+                                        </div>
+                                        <div class="form-check theme-brown mb-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC14" checked="">
+                                            <label class="form-check-label" for="checkC14">
+                                                Theme-purple checkbox
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-primary)">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC3" checked="">
+                                            <label class="form-check-label" for="checkC3">
+                                                Primary checkbox
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-secondary)">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC4" checked="">
+                                            <label class="form-check-label" for="checkC4">
+                                                Secondary checkbox
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-info)">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC5" checked="">
+                                            <label class="form-check-label" for="checkC5">
+                                                Info checkbox
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-success)">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC6" checked="">
+                                            <label class="form-check-label" for="checkC6">
+                                                Success checkbox
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-warning)">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC7" checked="">
+                                            <label class="form-check-label" for="checkC7">
+                                                Warning checkbox
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-danger)">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC8" checked="">
+                                            <label class="form-check-label" for="checkC8">
+                                                Danger checkbox
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-dark)">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC10" checked="">
+                                            <label class="form-check-label" for="checkC10">
+                                                Dark checkbox
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="form-check theme-red mb-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC11" checked="">
+                                            <label class="form-check-label" for="checkC11">
+                                                Theme-red checkbox
+                                            </label>
+                                        </div>
+                                        <div class="form-check theme-orange mb-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC12" checked="">
+                                            <label class="form-check-label" for="checkC12">
+                                                Theme-orange checkbox
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check theme-teal mb-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkC13" checked="">
+                                            <label class="form-check-label" for="checkC13">
+                                                Theme-teal checkbox
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="btn-check" id="btn-check11">
+                                <label class="btn btn-theme" for="btn-check11">Theme</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check13" checked="">
+                                <label class="btn btn-accent" for="btn-check13">Accent</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check12">
+                                <label class="btn btn-primary" for="btn-check12">Primary</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check14">
+                                <label class="btn btn-secondary" for="btn-check14">Secondary</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check15" checked="">
+                                <label class="btn btn-info" for="btn-check15">Info</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check16">
+                                <label class="btn btn-success" for="btn-check16">Success</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check17">
+                                <label class="btn btn-warning" for="btn-check17">Warning</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check18" checked="">
+                                <label class="btn btn-danger" for="btn-check18">Danger</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check19">
+                                <label class="btn btn-light" for="btn-check19">Light</label>
+
+                                <input type="checkbox" class="btn-check" id="btn-check20">
+                                <label class="btn btn-dark" for="btn-check20">Dark</label>
+                            </div>
+                            <div class="collapse" id="collapse4">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;div class="row"&gt;
+                &lt;div class="col-12 col-sm-6 col-md-4 col-lg-3"&gt;
+                    &lt;div class="form-check mb-3"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC1" checked&gt;
+                        &lt;label class="form-check-label" for="checkC1"&gt;
+                        Theme checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class="form-check mb-3" style="--adminuiux-theme-1:var(--adminuiux-theme-accent-1)"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC2" checked&gt;
+                        &lt;label class="form-check-label" for="checkC2"&gt;
+                        Accent checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class="form-check theme-brown mb-3"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC14" checked&gt;
+                        &lt;label class="form-check-label" for="checkC14"&gt;
+                        Theme-purple checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-primary)"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC3" checked&gt;
+                        &lt;label class="form-check-label" for="checkC3"&gt;
+                        Primary checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-12 col-sm-6 col-md-4 col-lg-3"&gt;
+                    &lt;div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-secondary)"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC4" checked&gt;
+                        &lt;label class="form-check-label" for="checkC4"&gt;
+                        Secondary checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-info)"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC5" checked&gt;
+                        &lt;label class="form-check-label" for="checkC5"&gt;
+                        Info checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-success)"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC6" checked&gt;
+                        &lt;label class="form-check-label" for="checkC6"&gt;
+                        Success checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-12 col-sm-6 col-md-4 col-lg-3"&gt;
+                    &lt;div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-warning)"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC7" checked&gt;
+                        &lt;label class="form-check-label" for="checkC7"&gt;
+                        Warning checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-danger)"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC8" checked&gt;
+                        &lt;label class="form-check-label" for="checkC8"&gt;
+                        Danger checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class="form-check mb-3" style="--adminuiux-theme-1:var(--bs-dark)"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC10" checked&gt;
+                        &lt;label class="form-check-label" for="checkC10"&gt;
+                        Dark checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            
+                &lt;div class="col-12 col-sm-6 col-md-4 col-lg-3"&gt;
+                    &lt;div class="form-check theme-red mb-3"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC11" checked&gt;
+                        &lt;label class="form-check-label" for="checkC11"&gt;
+                        Theme-red checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+            
+                    &lt;div class="form-check theme-orange mb-3"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC12" checked&gt;
+                        &lt;label class="form-check-label" for="checkC12"&gt;
+                        Theme-orange checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                
+                    &lt;div class="form-check theme-teal mb-3"&gt;
+                        &lt;input class="form-check-input" type="checkbox" value="" id="checkC13" checked&gt;
+                        &lt;label class="form-check-label" for="checkC13"&gt;
+                        Theme-teal checkbox
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+             &lt;/div&gt;
+             &lt;input type="checkbox" class="btn-check" id="btn-check11"&gt;
+             &lt;label class="btn btn-theme" for="btn-check11"&gt;Theme&lt;/label&gt;
+             
+             &lt;input type="checkbox" class="btn-check" id="btn-check13" checked&gt;
+             &lt;label class="btn btn-accent" for="btn-check13"&gt;Accent&lt;/label&gt;
+             
+             &lt;input type="checkbox" class="btn-check" id="btn-check12"&gt;
+             &lt;label class="btn btn-primary" for="btn-check12"&gt;Primary&lt;/label&gt;
+             
+             &lt;input type="checkbox" class="btn-check" id="btn-check14"&gt;
+             &lt;label class="btn btn-secondary" for="btn-check14"&gt;Secondary&lt;/label&gt;
+             
+             &lt;input type="checkbox" class="btn-check" id="btn-check15" checked&gt;
+             &lt;label class="btn btn-info" for="btn-check15"&gt;Info&lt;/label&gt;
+             
+             &lt;input type="checkbox" class="btn-check" id="btn-check16"&gt;
+             &lt;label class="btn btn-success" for="btn-check16"&gt;Success&lt;/label&gt;
+             
+             &lt;input type="checkbox" class="btn-check" id="btn-check17"&gt;
+             &lt;label class="btn btn-warning" for="btn-check17"&gt;Warning&lt;/label&gt;
+             
+             &lt;input type="checkbox" class="btn-check" id="btn-check18" checked&gt;
+             &lt;label class="btn btn-danger" for="btn-check18"&gt;Danger&lt;/label&gt;
+             
+             &lt;input type="checkbox" class="btn-check" id="btn-check19"&gt;
+             &lt;label class="btn btn-light" for="btn-check19"&gt;Light&lt;/label&gt;
+             
+             &lt;input type="checkbox" class="btn-check" id="btn-check20"&gt;
+             &lt;label class="btn btn-dark" for="btn-check20"&gt;Dark&lt;/label&gt;
+            </code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- component footer -->
+                        <div class="bg-theme-1-subtle rounded px-3 py-2 mb-4">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="component-radios.html" class="btn btn-accent me-3 my-2"><i class="bi bi-arrow-left mr-2"></i> Radios</a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="component-switches.html" class="btn btn-theme my-2">Switches <i class="bi bi-arrow-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- standard index footer -->
+<footer class="adminuiux-footer mt-auto">
+    <div class="container-fluid text-center">
+        <span class="small">Copyright @2024, Creatively designed by
+            <a href="https://adminuiux.com" target="_blank">InvestmentUX - Adminuiux</a> on Earth ❤️
+        </span>
+    </div>
+</footer>
+
+
+<!-- code highlighter -->
+<link rel="stylesheet" href="../../ajax/libs/highlight.js/11.10.0/styles/base16/circus.min.css">
+<script src="../../ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+    document.querySelectorAll('.code').forEach(el => {
+        // then highlight each
+        hljs.highlightElement(el);
+    });
+</script>
+
+                <!-- Page Level js -->
+                </body>
+
+</html>

@@ -1,0 +1,675 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+
+<head>
+    <!-- Required meta tags  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Investment AdminUIUX - Bootstrap HTML Admin template - adminuiux.com</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="../../css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --adminuiux-content-font: "Open Sans", sans-serif;
+            --adminuiux-content-font-weight: 400;
+            --adminuiux-title-font: "Lexend", sans-serif;
+            --adminuiux-title-font-weight: 600;
+        }
+    </style>
+
+<script defer="" src="assets/js/app.js?1096aad991449c8654b2"></script><link href="assets/css/app.css?1096aad991449c8654b2" rel="stylesheet"></head>
+
+<body class="main-bg main-bg-opac main-bg-blur adminuiux-sidebar-fill-white adminuiux-sidebar-boxed  theme-blue roundedui" data-theme="theme-blue" data-sidebarfill="adminuiux-sidebar-fill-white" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
+  <!-- Pageloader -->
+<div class="pageloader">
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-center text-center h-100">
+            <div class="col-12 mb-auto pt-4"></div>
+            <div class="col-auto">
+                <img src="assets/img/logo.svg" alt="" class="height-60 mb-3">
+                <p class="h6 mb-0">AdminUIUX</p>
+                <p class="h3 mb-4">Investment</p>
+                <div class="loader10 mb-2 mx-auto"></div>
+            </div>
+            <div class="col-12 mt-auto pb-4">
+                <p class="text-secondary">Please wait we are preparing awesome things to preview...</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- standard header -->
+<header class="adminuiux-header">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- logo -->
+            <a class="navbar-brand" href="investment-dashboard.html">
+                <img data-bs-img="light" src="assets/img/logo-light.svg" alt="">
+                <img data-bs-img="dark" src="assets/img/logo.svg" alt="">
+                <div class="">
+                    <span class="h4">Investment<b>UX</b></span>
+                    <p class="company-tagline">AdminUIUX HTML template</p>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-center" id="header-navbar">
+                <ul class="navbar-nav mx-lg-3 mb-2 mb-md-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="investment-dashboard.html">InvestmentUX</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="components.html" aria-current="page">Components</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="documentation.html">Documentation</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class=" ms-auto "></div>
+            <!-- right icons button -->
+            <div class="ms-auto">
+                <!-- dark mode -->
+                <button class="btn btn-link btn-square btnsunmoon btn-link-header" id="btn-layout-modes-dark-page">
+                    <i class="sun mx-auto" data-feather="sun"></i>
+                    <i class="moon mx-auto" data-feather="moon"></i>
+                </button>
+                <!-- Buy now -->
+                <button class="btn btn-theme btn-link-header">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+      <div class="adminuiux-wrap">
+        <main class="adminuiux-content" onclick="contentClick()">
+
+          <!-- breadcrumb -->
+          <div class="container-fluid mt-3">
+            <div class="bg-theme-1-subtle rounded px-3 py-3">
+              <div class="row gx-3 align-items-center">
+                <div class="col col-sm mb-2 mb-sm-0">
+                  <p class="h5">Progress</p>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item bi"><a href="investment-dashboard.html">App Demo</a></li>
+                      <li class="breadcrumb-item bi"><a href="components.html">Components</a></li>
+                      <li class="breadcrumb-item active bi" aria-current="page">Progress</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div class="col-auto ">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content  -->
+          <div class="container mt-4">
+            <div class="card adminuiux-card mb-4">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <p class="h6">Individual Pricing</p>
+                  </div>
+                  <div class="col-auto">
+                    <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false">
+                      <i class="bi bi-code-slash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card mb-4">
+                      <div class="card-body px-xl-4">
+                        <div class="text-center mb-4">
+                          <span class="badge badge-light text-bg-success">Active</span>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-auto">
+                            <i class="avatar avatar-60 rounded bg-theme-1-subtle text-theme-1 h4 bi bi-person vm"></i>
+                          </div>
+                          <div class="col">
+                            <h4>Personal</h4>
+                            <p class="text-secondary">Perfect for the individuals</p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center mb-4">
+                          <div class="col-auto">
+                            <h1 class="display-4"><span class="text-secondary">$</span>50</h1>
+                          </div>
+                          <div class="col">
+                            <p class="text-secondary">per license</p>
+                          </div>
+                        </div>
+                        <h6>Basic includes:</h6>
+                        <ul class="list-group adminuiux-list-group">
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> All demo access</li>
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> Unlimited Download</li>
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> No Contact list</li>
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 10 transactions per day</li>
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 24/7 Customer Support</li>
+                        </ul>
+                      </div>
+                      <div class="card-footer text-center">
+                        <button class="btn btn-theme">Buy Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card adminuiux-card bg-r-gradient border border-theme-1 mb-4">
+                      <div class="card-body px-xl-4">
+                        <div class="text-center mb-4">
+                          <span class="badge badge-light text-bg-theme-1">Recommended</span>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-auto">
+                            <i class="avatar avatar-60 rounded bg-theme-1-subtle text-theme-1 h4 bi bi-people vm"></i>
+                          </div>
+                          <div class="col">
+                            <h4 class="mb-1">Business</h4>
+                            <p class="text-secondary">Multiple team &amp; customer</p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center mb-4">
+                          <div class="col-auto">
+                            <h1 class="display-4"><span class="text-secondary">$</span>100</h1>
+                          </div>
+                          <div class="col">
+                            <p class="text-secondary">per license</p>
+                          </div>
+                        </div>
+                        <h6>Basic includes:</h6>
+                        <ul class="list-group adminuiux-list-group">
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> All demo access</li>
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> Unlimited Download</li>
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> No Contact list</li>
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 10 transactions per day</li>
+                          <li class="list-group-item text-secondary"><i class="bi bi-check-circle vm me-1"></i> 24/7 Customer Support</li>
+                        </ul>
+                      </div>
+                      <div class="card-footer text-center">
+                        <button class="btn btn-theme">Buy Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card adminuiux-card mb-4 bg-theme-1">
+                      <div class="card-body px-xl-4">
+                        <div class="text-center mb-4">
+                          <span class="badge badge-light bg-white-opacity">Best</span>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-auto">
+                            <i class="avatar avatar-60 rounded bg-theme-1-subtle text-theme-1 h4 bi bi-building vm"></i>
+                          </div>
+                          <div class="col">
+                            <h4 class="mb-1">Ultra Pro</h4>
+                            <p class="opacity-75">Multiple Application</p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center mb-4">
+                          <div class="col-auto">
+                            <h1 class="display-4"><span class="opacity-75">$</span>150</h1>
+                          </div>
+                          <div class="col">
+                            <p class="opacity-75">per license</p>
+                          </div>
+                        </div>
+                        <h6>Basic includes:</h6>
+                        <ul class="list-group adminuiux-list-group">
+                          <li class="list-group-item text-white"><i class="bi bi-check-circle vm me-1"></i> All demo access</li>
+                          <li class="list-group-item text-white"><i class="bi bi-check-circle vm me-1"></i> Unlimited Download</li>
+                          <li class="list-group-item text-white"><i class="bi bi-check-circle vm me-1"></i> No Contact list</li>
+                          <li class="list-group-item text-white"><i class="bi bi-check-circle vm me-1"></i> 10 transactions per day</li>
+                          <li class="list-group-item text-white"><i class="bi bi-check-circle vm me-1"></i> 24/7 Customer Support</li>
+                        </ul>
+                      </div>
+                      <div class="card-footer bg-none text-center">
+                        <button class="btn btn-light">Buy Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse" id="collapse1">
+                <div class="card-footer border-top">
+                  <div class="bg-dark text-white p-2 rounded my-2">
+                    <pre class="mb-2"><code class="code rounded language-html">
+            &lt;div class="row"&gt;
+              &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+                &lt;div class="card adminuiux-card mb-4"&gt;
+                  &lt;div class="card-body px-xl-4"&gt;
+                    &lt;div class="text-center mb-4"&gt;
+                      &lt;span class="badge badge-light text-bg-success"&gt;Active&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row mb-4"&gt;
+                      &lt;div class="col-auto"&gt;
+                        &lt;i class="avatar avatar-60 rounded bg-theme-1-subtle text-theme-1 h4 bi bi-person vm"&gt;&lt;/i&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col"&gt;
+                        &lt;h4&gt;Personal&lt;/h4&gt;
+                        &lt;p class="text-secondary"&gt;Perfect for the individuals&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row align-items-center mb-4"&gt;
+                      &lt;div class="col-auto"&gt;
+                        &lt;h1 class="display-4"&gt;&lt;span class="text-secondary"&gt;$&lt;/span&gt;50&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col"&gt;
+                        &lt;p class="text-secondary"&gt;per license&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h6&gt;Basic includes:&lt;/h6&gt;
+                    &lt;ul class="list-group adminuiux-list-group"&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; All demo access&lt;/li&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; Unlimited Download&lt;/li&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; No Contact list&lt;/li&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; 10 transactions per day&lt;/li&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; 24/7 Customer Support&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                  &lt;div class="card-footer text-center"&gt;
+                    &lt;button class="btn btn-theme"&gt;Buy Now!&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+                &lt;div class="card adminuiux-card bg-r-gradient border border-theme-1 mb-4"&gt;
+                  &lt;div class="card-body px-xl-4"&gt;
+                    &lt;div class="text-center mb-4"&gt;
+                      &lt;span class="badge badge-light text-bg-theme-1"&gt;Recommended&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row mb-4"&gt;
+                      &lt;div class="col-auto"&gt;
+                        &lt;i class="avatar avatar-60 rounded bg-theme-1-subtle text-theme-1 h4 bi bi-people vm"&gt;&lt;/i&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col"&gt;
+                        &lt;h4 class="mb-1"&gt;Business&lt;/h4&gt;
+                        &lt;p class="text-secondary"&gt;Multiple team &amp; customer&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row align-items-center mb-4"&gt;
+                      &lt;div class="col-auto"&gt;
+                        &lt;h1 class="display-4"&gt;&lt;span class="text-secondary"&gt;$&lt;/span&gt;100&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col"&gt;
+                        &lt;p class="text-secondary"&gt;per license&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h6&gt;Basic includes:&lt;/h6&gt;
+                    &lt;ul class="list-group adminuiux-list-group"&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; All demo access&lt;/li&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; Unlimited Download&lt;/li&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; No Contact list&lt;/li&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; 10 transactions per day&lt;/li&gt;
+                      &lt;li class="list-group-item text-secondary"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; 24/7 Customer Support&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                  &lt;div class="card-footer text-center"&gt;
+                    &lt;button class="btn btn-theme"&gt;Buy Now!&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+                &lt;div class="card adminuiux-card mb-4 bg-theme-1"&gt;
+                  &lt;div class="card-body px-xl-4"&gt;
+                    &lt;div class="text-center mb-4"&gt;
+                      &lt;span class="badge badge-light bg-white-opacity"&gt;Best&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row mb-4"&gt;
+                      &lt;div class="col-auto"&gt;
+                        &lt;i class="avatar avatar-60 rounded bg-theme-1-subtle text-theme-1 h4 bi bi-building vm"&gt;&lt;/i&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col"&gt;
+                        &lt;h4 class="mb-1"&gt;Ultra Pro&lt;/h4&gt;
+                        &lt;p class="opacity-75"&gt;Multiple Application&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row align-items-center mb-4"&gt;
+                      &lt;div class="col-auto"&gt;
+                        &lt;h1 class="display-4"&gt;&lt;span class="opacity-75"&gt;$&lt;/span&gt;150&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col"&gt;
+                        &lt;p class="opacity-75"&gt;per license&lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;h6&gt;Basic includes:&lt;/h6&gt;
+                    &lt;ul class="list-group adminuiux-list-group"&gt;
+                      &lt;li class="list-group-item text-white"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; All demo access&lt;/li&gt;
+                      &lt;li class="list-group-item text-white"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; Unlimited Download&lt;/li&gt;
+                      &lt;li class="list-group-item text-white"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; No Contact list&lt;/li&gt;
+                      &lt;li class="list-group-item text-white"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; 10 transactions per day&lt;/li&gt;
+                      &lt;li class="list-group-item text-white"&gt;&lt;i class="bi bi-check-circle vm me-1"&gt;&lt;/i&gt; 24/7 Customer Support&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                  &lt;div class="card-footer bg-none text-center"&gt;
+                    &lt;button class="btn btn-light"&gt;Buy Now!&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+                                </code></pre>
+                    <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card adminuiux-card mb-4">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <p class="h6">Grouped Pricing</p>
+                  </div>
+                  <div class="col-auto">
+                    <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false">
+                      <i class="bi bi-code-slash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card overflow-hidden text-center mb-4">
+                  <div class="row gx-0">
+                    <div class="col-12 col-lg">
+                      <div class="card-body">
+                        <h6>Do more pay less with annual plan</h6>
+                        <h1>Best plans for your need</h1>
+                        <p class="text-secondary">For customized services please contact us from <a href="investment-contact.html">customer service</a></p>
+                        <div class="text-center">
+                          <div class="form-check form-switch mx-auto w-auto d-inline-block mb-4">
+                            <input class="form-check-input" type="checkbox" role="switch" id="payannual" checked="">
+                            <label class="form-check-label" for="payannual">Save 10% with annual plan</label>
+                          </div>
+                        </div>
+                        <div class="table-responsive">
+                          <table class="table table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th class="text-start align-middle">
+                                  <p class="h6 mb-0">Whats included?</p>
+                                </th>
+                                <th class="text-center selected">
+                                  <p class="h4 mb-0">$50.00</p>
+                                  <p class="text-secondary fw-normal">Personal</p>
+                                </th>
+                                <th class="text-center">
+                                  <p class="h4 mb-0">$100.00</p>
+                                  <p class="text-secondary fw-normal">Pro</p>
+                                </th>
+                                <th class="text-center">
+                                  <p class="h4 mb-0">$150.00</p>
+                                  <p class="text-secondary fw-normal">Ultra Pro</p>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="text-start align-middle text-secondary">
+                                  Unlimited domain
+                                </td>
+                                <td class="selected">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                                <td class="">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                                <td class="">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-start align-middle text-secondary">
+                                  Firewall setup
+                                </td>
+                                <td class="selected">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                                <td class="">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                                <td class="">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-start align-middle text-secondary">
+                                  React support
+                                </td>
+                                <td class="selected"></td>
+                                <td class="">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                                <td class="">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-start align-middle text-secondary">
+                                  Angular Starter Kit
+                                </td>
+                                <td class="selected"></td>
+                                <td class=""></td>
+                                <td class="">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-start align-middle text-secondary">
+                                  Laravel Starter Kit
+                                </td>
+                                <td class="selected"></td>
+                                <td class=""></td>
+                                <td class="">
+                                  <i class="text-success bi bi-check-circle h5"></i>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-start align-middle">
+
+                                </td>
+                                <td class="selected">
+                                  <button class="btn btn-theme">Get Started</button>
+                                </td>
+                                <td class="">
+                                  <button class="btn btn-outline-theme">Get Started</button>
+                                </td>
+                                <td class="">
+                                  <button class="btn btn-outline-theme">Get Started</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-lg-4 mnh-250 position-relative overflow-hidden">
+                      <div class="coverimg h-100 w-100 position-absolute start-0 top-0" style="background-image: url(&quot;assets/img/modern-ai-image/flamingo-2.jpg&quot;);">
+                        <img src="assets/img/modern-ai-image/flamingo-2.jpg" alt="" style="display: none;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse" id="collapse2">
+                <div class="card-footer border-top">
+                  <div class="bg-dark text-white p-2 rounded my-2">
+                    <pre class="mb-2"><code class="code rounded language-html">
+            &lt;div class="card adminuiux-card overflow-hidden text-center mb-4"&gt;
+              &lt;div class="row gx-0"&gt;
+                &lt;div class="col-12 col-lg"&gt;
+                  &lt;div class="card-body"&gt;
+                    &lt;h6&gt;Do more pay less with annual plan&lt;/h6&gt;
+                    &lt;h1&gt;Best plans for your need&lt;/h1&gt;
+                    &lt;p class="text-secondary"&gt;For customized services please contact us from &lt;a href="investment-contact.html"&gt;customer service&lt;/a&gt;&lt;/p&gt;
+                    &lt;div class="text-center"&gt;
+                      &lt;div class="form-check form-switch mx-auto w-auto d-inline-block mb-4"&gt;
+                        &lt;input class="form-check-input" type="checkbox" role="switch" id="payannual" checked=""&gt;
+                        &lt;label class="form-check-label" for="payannual"&gt;Save 10% with annual plan&lt;/label&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="table-responsive"&gt;
+                      &lt;table class="table table-bordered mb-0"&gt;
+                        &lt;thead&gt;
+                          &lt;tr&gt;
+                            &lt;th class="text-start align-middle"&gt;
+                              &lt;h6&gt;Whats included?&lt;/h6&gt;
+                            &lt;/th&gt;
+                            &lt;th class="text-center selected"&gt;
+                              &lt;h4&gt;$50.00&lt;/h4&gt;
+                              &lt;p class="text-secondary fw-normal"&gt;Personal&lt;/p&gt;
+                            &lt;/th&gt;
+                            &lt;th class="text-center"&gt;
+                              &lt;h4&gt;$100.00&lt;/h4&gt;
+                              &lt;p class="text-secondary fw-normal"&gt;Pro&lt;/p&gt;
+                            &lt;/th&gt;
+                            &lt;th class="text-center"&gt;
+                              &lt;h4&gt;$150.00&lt;/h4&gt;
+                              &lt;p class="text-secondary fw-normal"&gt;Ultra Pro&lt;/p&gt;
+                            &lt;/th&gt;
+                          &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                            &lt;td class="text-start align-middle text-secondary"&gt;
+                              Unlimited domain
+                            &lt;/td&gt;
+                            &lt;td class="selected"&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;td class="text-start align-middle text-secondary"&gt;
+                              Firewall setup
+                            &lt;/td&gt;
+                            &lt;td class="selected"&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;td class="text-start align-middle text-secondary"&gt;
+                              React support
+                            &lt;/td&gt;
+                            &lt;td class="selected"&gt;&lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;td class="text-start align-middle text-secondary"&gt;
+                              Angular Starter Kit
+                            &lt;/td&gt;
+                            &lt;td class="selected"&gt;&lt;/td&gt;
+                            &lt;td class=""&gt;&lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;td class="text-start align-middle text-secondary"&gt;
+                              Laravel Starter Kit
+                            &lt;/td&gt;
+                            &lt;td class="selected"&gt;&lt;/td&gt;
+                            &lt;td class=""&gt;&lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;i class="text-success bi bi-check-circle h5"&gt;&lt;/i&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                          &lt;tr&gt;
+                            &lt;td class="text-start align-middle"&gt;
+            
+                            &lt;/td&gt;
+                            &lt;td class="selected"&gt;
+                              &lt;button class="btn btn-theme"&gt;Get Started&lt;/button&gt;
+                            &lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;button class="btn btn-outline-theme"&gt;Get Started&lt;/button&gt;
+                            &lt;/td&gt;
+                            &lt;td class=""&gt;
+                              &lt;button class="btn btn-outline-theme"&gt;Get Started&lt;/button&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-12 col-lg-4 col-lg-4 mnh-250 position-relative overflow-hidden"&gt;
+                  &lt;div class="coverimg h-100 w-100 position-absolute start-0 top-0" style="background-image: url(&quot;assets/img/modern-ai-image/flamingo-2.jpg&quot;);"&gt;
+                    &lt;img src="assets/img/modern-ai-image/flamingo-2.jpg" alt="" style="display: none;"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+                                </code></pre>
+                    <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- component footer -->
+            <div class="bg-theme-1-subtle rounded px-3 py-2 mb-4">
+              <div class="row">
+                <div class="col">
+                  <a href="component-popovers.html" class="btn btn-accent me-3 my-2"><i class="bi bi-arrow-left mr-2"></i> Popover</a>
+                </div>
+                <div class="col-auto">
+                  <a href="component-toasts.html" class="btn btn-theme my-2">Toasts <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!-- standard index footer -->
+<footer class="adminuiux-footer mt-auto">
+    <div class="container-fluid text-center">
+        <span class="small">Copyright @2024, Creatively designed by
+            <a href="https://adminuiux.com" target="_blank">InvestmentUX - Adminuiux</a> on Earth ❤️
+        </span>
+    </div>
+</footer>
+
+
+<!-- code highlighter -->
+<link rel="stylesheet" href="../../ajax/libs/highlight.js/11.10.0/styles/base16/circus.min.css">
+<script src="../../ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+    document.querySelectorAll('.code').forEach(el => {
+        // then highlight each
+        hljs.highlightElement(el);
+    });
+</script>
+
+        <!-- Page Level js -->
+        </body>
+
+</html>

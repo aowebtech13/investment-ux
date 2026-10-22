@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- dir="rtl"-->
+
+<head>
+    <!-- Required meta tags  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Investment AdminUIUX - Bootstrap HTML Admin template - adminuiux.com</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="../../css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --adminuiux-content-font: "Open Sans", sans-serif;
+            --adminuiux-content-font-weight: 400;
+            --adminuiux-title-font: "Lexend", sans-serif;
+            --adminuiux-title-font-weight: 600;
+        }
+    </style>
+
+<script defer="" src="assets/js/app.js?1096aad991449c8654b2"></script><link href="assets/css/app.css?1096aad991449c8654b2" rel="stylesheet"></head>
+
+<body class="main-bg main-bg-opac main-bg-blur adminuiux-sidebar-fill-white adminuiux-sidebar-boxed  theme-blue roundedui" data-theme="theme-blue" data-sidebarfill="adminuiux-sidebar-fill-white" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
+    <!-- Pageloader -->
+<div class="pageloader">
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-center text-center h-100">
+            <div class="col-12 mb-auto pt-4"></div>
+            <div class="col-auto">
+                <img src="assets/img/logo.svg" alt="" class="height-60 mb-3">
+                <p class="h6 mb-0">AdminUIUX</p>
+                <p class="h3 mb-4">Investment</p>
+                <div class="loader10 mb-2 mx-auto"></div>
+            </div>
+            <div class="col-12 mt-auto pb-4">
+                <p class="text-secondary">Please wait we are preparing awesome things to preview...</p>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- standard header -->
+<header class="adminuiux-header">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- logo -->
+            <a class="navbar-brand" href="investment-dashboard.html">
+                <img data-bs-img="light" src="assets/img/logo-light.svg" alt="">
+                <img data-bs-img="dark" src="assets/img/logo.svg" alt="">
+                <div class="">
+                    <span class="h4">Investment<b>UX</b></span>
+                    <p class="company-tagline">AdminUIUX HTML template</p>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-center" id="header-navbar">
+                <ul class="navbar-nav mx-lg-3 mb-2 mb-md-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="investment-dashboard.html">InvestmentUX</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="components.html" aria-current="page">Components</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="documentation.html">Documentation</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class=" ms-auto "></div>
+            <!-- right icons button -->
+            <div class="ms-auto">
+                <!-- dark mode -->
+                <button class="btn btn-link btn-square btnsunmoon btn-link-header" id="btn-layout-modes-dark-page">
+                    <i class="sun mx-auto" data-feather="sun"></i>
+                    <i class="moon mx-auto" data-feather="moon"></i>
+                </button>
+                <!-- Buy now -->
+                <button class="btn btn-theme btn-link-header">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+            <div class="adminuiux-wrap">
+                <main class="adminuiux-content" onclick="contentClick()">
+
+                    <!-- breadcrumb -->
+                    <div class="container-fluid mt-3">
+                        <div class="bg-theme-1-subtle rounded px-3 py-3">
+                            <div class="row gx-3 align-items-center">
+                                <div class="col col-sm mb-2 mb-sm-0">
+                                    <p class="h5">Badges</p>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item bi"><a href="investment-dashboard.html">App Demo</a></li>
+                                            <li class="breadcrumb-item bi"><a href="components.html">Components</a></li>
+                                            <li class="breadcrumb-item active bi" aria-current="page">Badges</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div class="col-auto ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content  -->
+                    <div class="container mt-4">
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Standard Badges</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="h1">Example heading <span class="badge text-bg-primary">New</span></p>
+                                <p class="h2">Example heading <span class="badge text-bg-secondary">New</span></p>
+                                <p class="h3">Example heading <span class="badge text-bg-success">New</span></p>
+                                <p class="h4">Example heading <span class="badge text-bg-info">New</span></p>
+                                <p class="h5">Example heading <span class="badge text-bg-warning">New</span></p>
+                                <p class="h6">Example heading <span class="badge text-bg-danger">New</span></p>
+                                <p>Example heading <span class="badge text-bg-dark">New</span></p>
+                            </div>
+                            <div class="collapse" id="collapse1">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;p class="h1"&gt;Example heading &lt;span class="badge text-bg-primary"&gt;New&lt;/span&gt;&lt;/p&gt;
+            &lt;p class="h2"&gt;Example heading &lt;span class="badge text-bg-secondary"&gt;New&lt;/span&gt;&lt;/p&gt;
+            &lt;p class="h3"&gt;Example heading &lt;span class="badge text-bg-success"&gt;New&lt;/span&gt;&lt;/p&gt;
+            &lt;p class="h4"&gt;Example heading &lt;span class="badge text-bg-info"&gt;New&lt;/span&gt;&lt;/p&gt;
+            &lt;p class="h5"&gt;Example heading &lt;span class="badge text-bg-warning"&gt;New&lt;/span&gt;&lt;/p&gt;
+            &lt;p class="h6"&gt;Example heading &lt;span class="badge text-bg-danger"&gt;New&lt;/span&gt;&lt;/p&gt;
+            </code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Badges in button</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-theme me-2">Notifications <span class="badge text-bg-warning">4</span> </button>
+                                <button type="button" class="btn btn-theme me-2">Pages <span class="badge text-bg-info">New</span></button>
+                            </div>
+                            <div class="collapse" id="collapse2">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;button type="button" class="btn btn-theme me-2"&gt;Notifications &lt;span class="badge text-bg-warning"&gt;4&lt;/span&gt; &lt;/button&gt;
+            &lt;button type="button" class="btn btn-theme me-2"&gt;Pages &lt;span class="badge text-bg-info"&gt;New&lt;/span&gt;&lt;/button&gt;</code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Position Badges</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-theme position-relative">
+                                    Inbox
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        99+
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapse3">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;button type="button" class="btn btn-theme position-relative"&gt;
+            Inbox
+            &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&gt;
+            99+
+            &lt;span class="visually-hidden"&gt;unread messages&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;/button&gt;</code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Badges inline</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <span class="badge text-bg-theme-1">Theme</span>
+                                <span class=" badge text-bg-theme-accent-1">Accent</span>
+                                <span class="badge text-bg-primary">Primary</span>
+                                <span class="badge text-bg-secondary">Secondary</span>
+                                <span class="badge text-bg-success">Success</span>
+                                <span class="badge text-bg-danger">Danger</span>
+                                <span class="badge text-bg-warning">Warning</span>
+                                <span class="badge text-bg-info">Info</span>
+                                <span class="badge text-bg-light">Light</span>
+                                <span class="badge text-bg-dark">Dark</span>
+                            </div>
+                            <div class="collapse" id="collapse4">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;span class="badge text-bg-theme-1"&gt;Theme&lt;/span&gt;
+            &lt;span class=" badge text-bg-theme-accent-1"&gt;Accent&lt;/span&gt;
+            &lt;span class="badge text-bg-primary"&gt;Primary&lt;/span&gt;
+            &lt;span class="badge text-bg-secondary"&gt;Secondary&lt;/span&gt;
+            &lt;span class="badge text-bg-success"&gt;Success&lt;/span&gt;
+            &lt;span class="badge text-bg-danger"&gt;Danger&lt;/span&gt;
+            &lt;span class="badge text-bg-warning"&gt;Warning&lt;/span&gt;
+            &lt;span class="badge text-bg-info"&gt;Info&lt;/span&gt;
+            &lt;span class="badge text-bg-light"&gt;Light&lt;/span&gt;
+            &lt;span class="badge text-bg-dark"&gt;Dark&lt;/span&gt;</code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Badges inline</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <span class="badge rounded-pill text-bg-theme-1">Theme</span>
+                                <span class="badge rounded-pill text-bg-theme-accent-1">Accent</span>
+                                <span class="badge rounded-pill text-bg-primary">Primary</span>
+                                <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+                                <span class="badge rounded-pill text-bg-success">Success</span>
+                                <span class="badge rounded-pill text-bg-danger">Danger</span>
+                                <span class="badge rounded-pill text-bg-warning">Warning</span>
+                                <span class="badge rounded-pill text-bg-info">Info</span>
+                                <span class="badge rounded-pill text-bg-light">Light</span>
+                                <span class="badge rounded-pill text-bg-dark">Dark</span>
+                            </div>
+                            <div class="collapse" id="collapse5">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;span class="badge rounded-pill text-bg-theme-1"&gt;Theme&lt;/span&gt;
+            &lt;span class="badge rounded-pill text-bg-theme-accent-1"&gt;Accent&lt;/span&gt;
+            &lt;span class="badge rounded-pill text-bg-primary"&gt;Primary&lt;/span&gt;
+            &lt;span class="badge rounded-pill text-bg-secondary"&gt;Secondary&lt;/span&gt;
+            &lt;span class="badge rounded-pill text-bg-success"&gt;Success&lt;/span&gt;
+            &lt;span class="badge rounded-pill text-bg-danger"&gt;Danger&lt;/span&gt;
+            &lt;span class="badge rounded-pill text-bg-warning"&gt;Warning&lt;/span&gt;
+            &lt;span class="badge rounded-pill text-bg-info"&gt;Info&lt;/span&gt;
+            &lt;span class="badge rounded-pill text-bg-light"&gt;Light&lt;/span&gt;
+            &lt;span class="badge rounded-pill text-bg-dark"&gt;Dark&lt;/span&gt;</code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card adminuiux-card mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <p class="h6">Badges Lights</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-theme btn-square" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false">
+                                            <i class="bi bi-code-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <span class="badge badge-light text-bg-theme-1">Theme</span>
+                                <span class=" badge badge-light text-bg-theme-accent-1">Accent</span>
+                                <span class="badge badge-light text-bg-primary">Primary</span>
+                                <span class="badge badge-light text-bg-secondary">Secondary</span>
+                                <span class="badge badge-light text-bg-success">Success</span>
+                                <span class="badge badge-light text-bg-danger">Danger</span>
+                                <span class="badge badge-light text-bg-warning">Warning</span>
+                                <span class="badge badge-light text-bg-info">Info</span>
+                                <span class="badge badge-light text-bg-light">Light</span>
+                                <span class="badge badge-light text-bg-dark">Dark</span>
+                            </div>
+                            <div class="collapse" id="collapse6">
+                                <div class="card-footer border-top">
+                                    <div class="bg-dark text-white p-2 rounded my-2">
+                                        <pre class="mb-2"><code class="code rounded language-html">
+            &lt;span class="badge badge-light text-bg-theme-1"&gt;Theme&lt;/span&gt;
+            &lt;span class=" badge badge-light text-bg-theme-accent-1"&gt;Accent&lt;/span&gt;
+            &lt;span class="badge badge-light text-bg-primary"&gt;Primary&lt;/span&gt;
+            &lt;span class="badge badge-light text-bg-secondary"&gt;Secondary&lt;/span&gt;
+            &lt;span class="badge badge-light text-bg-success"&gt;Success&lt;/span&gt;
+            &lt;span class="badge badge-light text-bg-danger"&gt;Danger&lt;/span&gt;
+            &lt;span class="badge badge-light text-bg-warning"&gt;Warning&lt;/span&gt;
+            &lt;span class="badge badge-light text-bg-info"&gt;Info&lt;/span&gt;
+            &lt;span class="badge badge-light text-bg-light"&gt;Light&lt;/span&gt;
+            &lt;span class="badge badge-light text-bg-dark"&gt;Dark&lt;/span&gt;</code></pre>
+                                        <button type="button" class="btn btn-outline-light  btn-square copycode"><i class="bi bi-clipboard"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- component footer -->
+                        <div class="bg-theme-1-subtle rounded px-3 py-2 mb-4">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="component-alerts.html" class="btn btn-accent me-3 my-2"><i class="bi bi-arrow-left mr-2"></i> Alerts</a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="component-popovers.html" class="btn btn-theme my-2">Popover <i class="bi bi-arrow-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- standard index footer -->
+<footer class="adminuiux-footer mt-auto">
+    <div class="container-fluid text-center">
+        <span class="small">Copyright @2024, Creatively designed by
+            <a href="https://adminuiux.com" target="_blank">InvestmentUX - Adminuiux</a> on Earth ❤️
+        </span>
+    </div>
+</footer>
+
+
+<!-- code highlighter -->
+<link rel="stylesheet" href="../../ajax/libs/highlight.js/11.10.0/styles/base16/circus.min.css">
+<script src="../../ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+    document.querySelectorAll('.code').forEach(el => {
+        // then highlight each
+        hljs.highlightElement(el);
+    });
+</script>
+
+                <!-- Page Level js -->
+                </body>
+
+</html>
