@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Verify Email - Investment</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="../../css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --adminuiux-content-font: "Open Sans", sans-serif;
+            --adminuiux-content-font-weight: 400;
+            --adminuiux-title-font: "Lexend", sans-serif;
+            --adminuiux-title-font-weight: 600;
+        }
+    </style>
+    <script defer="" src="assets/js/axios.min.js"></script>
+    <script defer="" src="assets/js/axios-library.js"></script>
+    <script defer="" src="assets/js/app.js?1096aad991449c8654b2"></script>
+    <link href="assets/css/app.css?1096aad991449c8654b2" rel="stylesheet">
+</head>
+
+<body class="main-bg main-bg-opac main-bg-blur adminuiux-sidebar-fill-white adminuiux-sidebar-boxed theme-blue roundedui" data-theme="theme-blue">
+    <main class="flex-shrink-0 pt-0 h-100">
+        <div class="container-fluid">
+            <div class="auth-wrapper">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-xl-4 minvheight-100 d-flex flex-column px-0">
+                        <header class="adminuiux-header">
+                            <nav class="navbar">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand" href="investment-dashboard.html">
+                                        <img data-bs-img="light" src="assets/img/logo-light.svg" alt="">
+                                        <img data-bs-img="dark" src="assets/img/logo.svg" alt="">
+                                    </a>
+                                    <div class="ms-auto"></div>
+                                </div>
+                            </nav>
+                        </header>
+
+                        <div class="h-100 py-4 px-3">
+                            <div class="row h-100 align-items-center justify-content-center mt-md-4">
+                                <div class="col-11 col-sm-8 col-md-11 col-xl-11 col-xxl-10 login-box">
+                                    <div class="text-center mb-4">
+                                        <h1 class="mb-2">Verify Email</h1>
+                                        <p class="text-secondary">Enter the 6-digit code sent to your email</p>
+                                        <p class="text-theme-1 small" id="emailDisplay"></p>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="otpCode" class="form-label">Verification Code</label>
+                                        <input type="text" class="form-control text-center" id="otpCode" maxlength="6" placeholder="000000" style="letter-spacing: 0.5em; font-size: 1.5rem;">
+                                    </div>
+
+                                    <div id="errorMessage" class="alert alert-danger d-none" role="alert"></div>
+                                    <div id="successMessage" class="alert alert-success d-none" role="alert"></div>
+
+                                    <button id="verifyBtn" class="btn btn-lg btn-theme w-100 mb-4">Verify Email</button>
+                                    
+                                    <div class="text-center mb-3">
+                                        Didn't receive code? <a href="#" id="resendBtn" class="text-theme-1">Resend</a>
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <a href="investment-login.html" class="text-secondary">Back to Login</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer class="adminuiux-footer mt-auto">
+                            <div class="container-fluid text-center">
+                                <span class="small">Copyright @2024, <a href="https://adminuiux.com" target="_blank">InvestmentUX - Adminuiux</a> on Earth ❤️</span>
+                            </div>
+                        </footer>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-8 p-4 d-none d-md-block">
+                        <div class="card adminuiux-card bg-theme-1-space position-relative overflow-hidden h-100">
+                            <div class="position-absolute start-0 top-0 h-100 w-100 coverimg opacity-75 z-index-0">
+                                <img src="assets/img/background-image/background-image-8.jpg" alt="">
+                            </div>
+                            <div class="card-body position-relative z-index-1">
+                                <div class="row h-100 d-flex flex-column justify-content-center align-items-center gx-0 text-center">
+                                    <div class="col-10 col-md-11 col-xl-8 mb-4 mx-auto">
+                                        <div class="swiper swipernavpagination pb-5">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/investment/slider.png" alt="" class="mw-100 mb-3">
+                                                    <h2 class="text-white mb-3">Secure Your Account with Email Verification</h2>
+                                                    <p class="lead opacity-75">We've sent a verification code to your email</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination white bottom-0"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const email = sessionStorage.getItem('verification_email') || localStorage.getItem('verification_email') || '';
+            const emailDisplay = document.getElementById('emailDisplay');
+            if (email) {
+                emailDisplay.textContent = email;
+            }
+
+            const verifyBtn = document.getElementById('verifyBtn');
+            const resendBtn = document.getElementById('resendBtn');
+            const otpCode = document.getElementById('otpCode');
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+
+            function showError(msg) {
+                errorMessage.textContent = msg;
+                errorMessage.classList.remove('d-none');
+                successMessage.classList.add('d-none');
+            }
+
+            function showSuccess(msg) {
+                successMessage.textContent = msg;
+                successMessage.classList.remove('d-none');
+                errorMessage.classList.add('d-none');
+            }
+
+            verifyBtn.addEventListener('click', function() {
+                const code = otpCode.value.trim();
+                if (!email) {
+                    showError('No email found. Please register again.');
+                    return;
+                }
+                if (code.length !== 6) {
+                    showError('Please enter a 6-digit code');
+                    return;
+                }
+
+                verifyBtn.disabled = true;
+                verifyBtn.textContent = 'Verifying...';
+
+                if (typeof API !== 'undefined') {
+                    fetch(API_CONFIG.baseURL + '/verify-email-code', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        body: JSON.stringify({ email: email, code: code })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.message && data.message.includes('success')) {
+                            showSuccess('Email verified successfully! Redirecting...');
+                            setTimeout(() => {
+                                window.location.href = 'investment-login.html';
+                            }, 2000);
+                        } else if (data.errors) {
+                            showError(data.errors.code ? data.errors.code[0] : 'Verification failed');
+                        } else {
+                            showError(data.message || 'Verification failed');
+                        }
+                    })
+                    .catch(err => {
+                        showError('Verification failed. Please try again.');
+                    })
+                    .finally(() => {
+                        verifyBtn.disabled = false;
+                        verifyBtn.textContent = 'Verify Email';
+                    });
+                }
+            });
+
+            resendBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (!email) {
+                    showError('No email found. Please register again.');
+                    return;
+                }
+
+                resendBtn.textContent = 'Sending...';
+                fetch(API_CONFIG.baseURL + '/resend-verification-code', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: JSON.stringify({ email: email })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    showSuccess('Verification code sent successfully!');
+                    setTimeout(() => successMessage.classList.add('d-none'), 3000);
+                })
+                .catch(err => {
+                    showError('Failed to resend code');
+                })
+                .finally(() => {
+                    resendBtn.textContent = 'Resend';
+                });
+            });
+
+            // Allow Enter key to verify
+            otpCode.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    verifyBtn.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
