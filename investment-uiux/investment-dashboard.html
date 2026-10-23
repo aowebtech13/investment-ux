@@ -349,7 +349,7 @@
                                     <div class="card adminuiux-card">
                                         <div class="card-body">
                                             <p class="text-secondary small mb-2">Total Profit</p>
-                                            <h4 class="mb-3">$13.20k</h4>
+                                            <h4 class="mb-3" id="dp-total-profit">$13.20k</h4>
                                             <span class="badge badge-light text-bg-success"><i class="me-1 bi bi-arrow-up-short"></i>28.50%</span>
                                         </div>
                                     </div>
@@ -359,7 +359,7 @@
                                     <div class="card adminuiux-card">
                                         <div class="card-body">
                                             <p class="text-secondary small mb-2">Best Profit</p>
-                                            <h4 class="mb-3">$8.34k</h4>
+                                            <h4 class="mb-3" id="dp-best-profit">$8.34k</h4>
                                             <span class="badge badge-light text-bg-success"><i class="me-1 bi bi-arrow-up-short"></i>54.35%</span>
                                         </div>
                                     </div>
@@ -369,7 +369,7 @@
                                     <div class="card adminuiux-card">
                                         <div class="card-body">
                                             <p class="text-secondary small mb-2">Top Loser</p>
-                                            <h4 class="mb-3">-$5.15k</h4>
+                                            <h4 class="mb-3" id="dp-top-loser">-$5.15k</h4>
                                             <span class="badge badge-light text-bg-danger"><i class="me-1 bi bi-arrow-down-short"></i>18.25%</span>
                                         </div>
                                     </div>
@@ -387,7 +387,7 @@
                                             <div class="row align-items-center justify-content-center h-100 py-4">
                                                 <div class="col-11">
                                                     <h2 class="fw-normal">Your portfolio value has been grown by</h2>
-                                                    <h1 class="mb-3">$7.52k</h1>
+                                                    <h1 class="mb-3" id="dp-portfolio-growth">$7.52k</h1>
                                                     <p>In last 7 days</p>
                                                 </div>
                                             </div>
@@ -409,19 +409,19 @@
                                                     <div class="card adminuiux-card bg-theme-1 mb-3">
                                                         <div class="card-body">
                                                             <p class="text-white mb-2">Current Value</p>
-                                                            <h4 class="fw-medium">$ 65.52k <span class="text-white fs-14"><i class="bi bi-arrow-up-short me-1"></i> 18.5%</span></h4>
+                                                            <h4 class="fw-medium" id="dp-current-value">$ 65.52k <span class="text-white fs-14"><i class="bi bi-arrow-up-short me-1"></i> 18.5%</span></h4>
                                                         </div>
                                                     </div>
                                                     <div class="card adminuiux-card bg-theme-1-subtle mb-3">
                                                         <div class="card-body">
                                                             <p class="text-secondary mb-2">Profit Revenue</p>
-                                                            <h4 class="fw-medium">$ 15.51k <span class="text-success fs-14"><i class="bi bi-arrow-up-short me-1"></i> 11.5%</span></h4>
+                                                            <h4 class="fw-medium" id="dp-profit-revenue">$ 15.51k <span class="text-success fs-14"><i class="bi bi-arrow-up-short me-1"></i> 11.5%</span></h4>
                                                         </div>
                                                     </div>
                                                     <div class="card adminuiux-card bg-theme-1-subtle mb-3">
                                                         <div class="card-body">
                                                             <p class="text-secondary mb-2">Investment</p>
-                                                            <h4 class="fw-medium">$ 45.00k</h4>
+                                                            <h4 class="fw-medium" id="dp-investment">$ 45.00k</h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -602,7 +602,7 @@
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            <h4 class="fw-medium">$ 1152.25k </h4>
+                                            <h4 class="fw-medium" id="dp-wallet-balance">$ 1152.25k </h4>
                                             <p>Total net revenue is $ 756.83 <span class="text-success fs-14"><i class="bi bi-arrow-up-short"></i> 11.5%</span> increased in last week</p>
 
                                             <!-- chart blue -->
@@ -938,6 +938,7 @@
 
                     <!-- Page Level js -->
                     <script src="assets/js/investment/investment-dashboard.js"></script>
+                    <script src="assets/js/investment/investment-dashboard-api.js"></script>
 
                     </body>
 
