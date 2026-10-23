@@ -55,6 +55,7 @@ Route::middleware(['throttle:api'])->group(function () {
         Route::post('/deposit/paystack/verify', [\App\Http\Controllers\Api\DepositController::class, 'verifyPaystack'])->middleware('throttle:transactions');
 
         Route::get('/profile', [ProfileController::class, 'show']);
+        Route::post('/onboarding', [\App\Http\Controllers\Api\OnboardingController::class, 'store']);
         Route::post('/profile', [ProfileController::class, 'update']);
         Route::post('/profile/password', [ProfileController::class, 'updatePassword']);
         Route::post('/profile/withdrawal-details', [ProfileController::class, 'updateWithdrawalDetails']);

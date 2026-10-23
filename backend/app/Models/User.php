@@ -124,6 +124,9 @@ class User extends Authenticatable
         'password_reset_otp',
         'otp_expires_at',
         'last_login_bonus_at',
+        'onboarding_description',
+        'interest_area',
+        'onboarding_completed',
     ];
 
     /**
