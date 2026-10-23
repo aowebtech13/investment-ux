@@ -11,16 +11,21 @@
         var API = window.API;
         var utils = window.ApiUtils;
 
-        // Retry helper: recovers from transient 429 (rate limit) with backoff.
+        // Retry helper: recovers from transient 429 (rate limit) once, then
+        // fails silently so the dashboard keeps its static design content.
         var fetchWithRetry = function (fn, maxAttempts) {
             var attempts = 0;
-            var max = maxAttempts || 4;
+            var max = maxAttempts || 2;
             var run = function () {
                 attempts++;
                 return fn().catch(function (e) {
                     var status = e && e.response ? e.response.status : 0;
                     if (status === 429 && attempts < max) {
-                        var delay = Math.min(1000 * Math.pow(2, attempts - 1), 8000);
+                        var retryAfter = e && e.response && e.response.headers
+                            ? (e.response.headers['retry-after'] || e.response.headers['Retry-After'])
+                            : 0;
+                        var delay = retryAfter ? parseInt(retryAfter, 10) * 1000 : 5000;
+                        delay = Math.min(Math.max(delay, 2000), 10000);
                         return new Promise(function (resolve) {
                             setTimeout(resolve, delay);
                         }).then(run);
@@ -29,6 +34,10 @@
                 });
             };
             return run();
+        };
+
+        var sleep = function (ms) {
+            return new Promise(function (resolve) { setTimeout(resolve, ms); });
         };
 
         var fmt = function (n) {
@@ -52,11 +61,20 @@
             return Number(v) >= 0 ? '+' : '';
         };
 
+        (async function run() {
+            // Stagger calls so they don't burst the per-IP rate limit at once.
+            await loadUpdates();
+            await sleep(800);
+            await loadMarketTable();
+            await sleep(800);
+            await loadStats();
+        })();
+
         // ---------- Updates swiper: featured live signals ----------
-        (function loadUpdates() {
+        function loadUpdates() {
             var wrapper = document.querySelector('.swipernav .swiper-wrapper');
-            if (!wrapper) return;
-            fetchWithRetry(function () {
+            if (!wrapper) return Promise.resolve();
+            return fetchWithRetry(function () {
                 return API.tradingSignals.getFeatured();
             }).then(function (res) {
                 var signals = (res && res.data) ? (res.data.data || res.data || []) : [];
@@ -82,13 +100,13 @@
             }).catch(function (e) {
                 console.warn('Dashboard updates feed unavailable', e);
             });
-        })();
+        }
 
         // ---------- Market table: live trading signals ----------
-        (function loadMarketTable() {
+        function loadMarketTable() {
             var tbody = document.querySelector('#dataTable tbody');
-            if (!tbody) return;
-            fetchWithRetry(function () {
+            if (!tbody) return Promise.resolve();
+            return fetchWithRetry(function () {
                 return API.tradingSignals.getAll({ per_page: 8 });
             }).then(function (res) {
                 var signals = (res && res.data) ? (res.data.data || res.data || []) : [];
@@ -140,12 +158,12 @@
             }).catch(function (e) {
                 console.warn('Dashboard market table unavailable', e);
             });
-        })();
+        }
 
         // ---------- Stats cards: authenticated dashboard data ----------
-        (function loadStats() {
-            if (!utils.isLoggedIn()) return;
-            fetchWithRetry(function () {
+        function loadStats() {
+            if (!utils.isLoggedIn()) return Promise.resolve();
+            return fetchWithRetry(function () {
                 return API.dashboard.getData();
             }).then(function (res) {
                 var stats = (res && res.data) ? (res.data.stats || res.stats || {}) : {};
@@ -160,7 +178,7 @@
             }).catch(function (e) {
                 console.warn('Dashboard stats unavailable', e);
             });
-        })();
+        }
 
         function setStat(id, value) {
             var el = document.getElementById(id);
