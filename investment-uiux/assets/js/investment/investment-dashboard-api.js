@@ -11,6 +11,26 @@
         var API = window.API;
         var utils = window.ApiUtils;
 
+        // Retry helper: recovers from transient 429 (rate limit) with backoff.
+        var fetchWithRetry = function (fn, maxAttempts) {
+            var attempts = 0;
+            var max = maxAttempts || 4;
+            var run = function () {
+                attempts++;
+                return fn().catch(function (e) {
+                    var status = e && e.response ? e.response.status : 0;
+                    if (status === 429 && attempts < max) {
+                        var delay = Math.min(1000 * Math.pow(2, attempts - 1), 8000);
+                        return new Promise(function (resolve) {
+                            setTimeout(resolve, delay);
+                        }).then(run);
+                    }
+                    return Promise.reject(e);
+                });
+            };
+            return run();
+        };
+
         var fmt = function (n) {
             return Number(n || 0).toLocaleString(undefined, {
                 minimumFractionDigits: 2,
@@ -36,7 +56,9 @@
         (function loadUpdates() {
             var wrapper = document.querySelector('.swipernav .swiper-wrapper');
             if (!wrapper) return;
-            API.tradingSignals.getFeatured().then(function (res) {
+            fetchWithRetry(function () {
+                return API.tradingSignals.getFeatured();
+            }).then(function (res) {
                 var signals = (res && res.data) ? (res.data.data || res.data || []) : [];
                 if (!signals.length) return;
                 wrapper.innerHTML = '';
@@ -66,7 +88,9 @@
         (function loadMarketTable() {
             var tbody = document.querySelector('#dataTable tbody');
             if (!tbody) return;
-            API.tradingSignals.getAll({ per_page: 8 }).then(function (res) {
+            fetchWithRetry(function () {
+                return API.tradingSignals.getAll({ per_page: 8 });
+            }).then(function (res) {
                 var signals = (res && res.data) ? (res.data.data || res.data || []) : [];
                 if (!signals.length) return;
                 tbody.innerHTML = '';
@@ -121,7 +145,9 @@
         // ---------- Stats cards: authenticated dashboard data ----------
         (function loadStats() {
             if (!utils.isLoggedIn()) return;
-            API.dashboard.getData().then(function (res) {
+            fetchWithRetry(function () {
+                return API.dashboard.getData();
+            }).then(function (res) {
                 var stats = (res && res.data) ? (res.data.stats || res.stats || {}) : {};
                 setStat('dp-total-profit', stats.total_profit);
                 setStat('dp-best-profit', stats.total_profit);
