@@ -96,6 +96,12 @@
             },
             getUser: function() {
                 return api.get('/user');
+            },
+            forgotPassword: function(email) {
+                return api.post('/forgot-password-otp', { email: email });
+            },
+            resetPassword: function(data) {
+                return api.post('/reset-password-with-otp', data);
             }
         },
 
